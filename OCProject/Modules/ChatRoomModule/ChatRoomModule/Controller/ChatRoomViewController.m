@@ -19,6 +19,10 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (IBAction)backBtnClicked:(UIButton *)btn{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 

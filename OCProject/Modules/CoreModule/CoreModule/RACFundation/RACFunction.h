@@ -6,8 +6,5 @@
 //  Copyright © 2019 zwq. All rights reserved.
 //
 
-#ifndef RACFunction_h
-#define RACFunction_h
-
-
-#endif /* RACFunction_h */
+#import <CoreModule/RACSubjectObject.h>
+#import <CoreModule/RACSignalManager.h>

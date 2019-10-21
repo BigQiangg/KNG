@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LYMobilePhoneLoginView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="yzf-kJ-fHu">
+                    <rect key="frame" x="139" y="92" width="97" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="5JM-di-no3"/>
+                        <constraint firstAttribute="height" constant="39" id="k10-Xc-gE2"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4P-pW-Ykz">
+                    <rect key="frame" x="36" y="191" width="303" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="AiY-96-OYu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="本机号码一键登录">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="nextBtnClickAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="aar-RR-Gxe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ki-Y3-cQq">
+                    <rect key="frame" x="36" y="271" width="303" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="Ykm-df-e6Y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="手机验证码登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="topBtnClickAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="7er-MP-Og2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="P4P-pW-Ykz" firstAttribute="top" secondItem="yzf-kJ-fHu" secondAttribute="bottom" constant="60" id="0sO-fG-dCy"/>
+                <constraint firstItem="yzf-kJ-fHu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="72" id="1CN-E3-GbS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="P4P-pW-Ykz" secondAttribute="trailing" constant="36" id="2HR-Gt-IAM"/>
+                <constraint firstItem="P4P-pW-Ykz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="EC4-B7-rjO"/>
+                <constraint firstItem="5ki-Y3-cQq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="b36-L8-sHb"/>
+                <constraint firstItem="5ki-Y3-cQq" firstAttribute="top" secondItem="P4P-pW-Ykz" secondAttribute="bottom" constant="24" id="ca3-b1-W5A"/>
+                <constraint firstItem="yzf-kJ-fHu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dzk-cx-gu2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5ki-Y3-cQq" secondAttribute="trailing" constant="36" id="fMR-gY-84n"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btnNext" destination="P4P-pW-Ykz" id="c4e-Uv-DOu"/>
+                <outlet property="btnPhoneLogin" destination="5ki-Y3-cQq" id="A1s-8e-ctJ"/>
+            </connections>
+            <point key="canvasLocation" x="55.200000000000003" y="48.125937031484263"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login_logo" width="88" height="35"/>
+    </resources>
+</document>
